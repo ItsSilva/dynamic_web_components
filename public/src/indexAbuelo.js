@@ -27,6 +27,7 @@ class AppContainer extends HTMLElement { // Let the HTML cont
     };
     render(){
         this.shadowRoot.innerHTML = `
+        <counter-button></counter-button>
         `;
         this.cards.forEach((CharacterCard) => {
             this.shadowRoot.appendChild(CharacterCard); // Add (save) the card to the shadowRoot

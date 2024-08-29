@@ -9,7 +9,7 @@ class AppContainer extends HTMLElement { // Let the HTML cont
         this.render();
     };
     render(){
-        this.shadowRoot.innerHTML = ``;
+        //this.shadowRoot.innerHTML = ``;
 
         dataCards.forEach((element) => {
             this.shadowRoot.innerHTML += `
@@ -17,8 +17,13 @@ class AppContainer extends HTMLElement { // Let the HTML cont
              name="${element.name}"
              gender="${element.gender}"
              image="${element.image}">
-            </character-card>`
+            </character-card>
+            <counter-button></counter-button>
+            <message-button></message-button>
+            `;
         })
+
+        this.shadowRoot.innerHTML += `<counter-button></counter-button>`;
     }
     };
 customElements.define('app-container', AppContainer);
